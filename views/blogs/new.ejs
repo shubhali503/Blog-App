@@ -1,0 +1,40 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %>
+
+<div class="container" style="margin-top: 3rem; width: 80vw">
+    
+    <form class="validated-form" action="/blogs" method="POST" style="max-width: 70%; margin: 10px auto" novalidate>
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title" placeholder="Blog's Title" name="blog[name]" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="img" class="form-label">Image URL</label>
+          <input type="text" class="form-control" id="img" placeholder="Image URL" name="blog[img]" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" class="form-control" id="author" placeholder="Author's Name" name="blog[author]" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Your Blog Goes Here!</label>
+            <textarea class="form-control" id="desc" cols="5" rows="6" name="blog[desc]" required></textarea>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+</div>
+
+<%- include("../partials/footer") %>
